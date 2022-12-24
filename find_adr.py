@@ -22,7 +22,7 @@ def get_args():
 d = 784 # dimension of input
 m = 3   # layers of SDN
 
-@func_set_timeout(60)
+@func_set_timeout(600)
 def generate_example(dataset, target, boundary, adversarial=False):
     start_time = time()
     N, W, B, g, a = load_model(dataset)
@@ -83,7 +83,7 @@ def generate_example(dataset, target, boundary, adversarial=False):
                 else:
                     C_activation += [Hidden[i][j*g + l]==_Hidden[i][j*g + l] for l in range(g)]
         s.add(C_activation)
-        #s.add(C_ap)
+        s.add(C_ap)
         #print(len(s.assertions()))
         check = s.check() 
         use_time = time() - start_time
