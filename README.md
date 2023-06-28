@@ -10,3 +10,13 @@ This is the repository for our paper "Using Z3 for formal modeling and verificat
 + `find_adr.py` is used for create boundary and adversarial examples. For example, use<code>python find_adr.py --dataset 'MNIST' --mode 'all'</code>
 + `AE.py` is used to train autoencoders and save prototypes.
 + `z3_utils` is used to translate the SDN model parameters into z3-readable lists, and other utils.
+
+## Citation
+```
+@inproceedings{Zhang2023UsingZF,
+    title={Using Z3 for Formal Modeling and Verification of FNN Global Robustness},
+    author={Yihao Zhang and Zeming Wei and Xiyue Zhang and Meng Sun},
+    booktitle={SEKE},
+    year={2023}
+}
+```
